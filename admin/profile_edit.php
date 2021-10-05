@@ -8,7 +8,7 @@ $row_m=mysqli_fetch_array($rs_m);
 
 ?>
 <div class="col-md-12">
-<form  name="register" action="profile_db.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
+<form  name="register" action="profile_edit_db.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
   <div class="form-group">
     <div class="col-sm-2">  </div>
     <div class="col-md-12" align="center">
@@ -54,9 +54,10 @@ $row_m=mysqli_fetch_array($rs_m);
    
     </div>
   <div class="form-group">
-    <div class="col-sm-2" align=""> ชื่อผู้ใช้งาน :</div>
+    <div class="col-sm-2" align=""> ภาพ :</div>
     <div class="col-md-12" align="left">
       <input  name="image" type="file" required class="form-control" id="image" >
+      <img src="../assets/image/m_img/value="<?php echo $row_m['image']; ?>"" alt="">
     </div>
   </div>
 
@@ -64,6 +65,7 @@ $row_m=mysqli_fetch_array($rs_m);
   <div class="form-group">
     <div class="col-sm-2"> </div>
     <div class="col-md-12" align="right">
+      <input type="hidden" name="image2" id="" value="<?php echo $row_m['image']; ?>">
         <input type="hidden" name="id" value="<?php  echo $id;  ?>">
       <button type="submit" class="btn btn-success btn-flat" id="btn"><span class="glyphicon glyphicon-saved"></span> บันทึก  
       </button> <a href="index.php" type="button" class="btn btn-danger btn-flat" id="btn"><span class="glyphicon glyphicon-saved"></span> ยกเลิก  </a>
