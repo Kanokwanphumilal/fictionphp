@@ -1,32 +1,22 @@
 <?php 
+
 $menu = "index"
 
 ?>
 <title>หน้าแรก</title>
 <?php include("header.php"); ?>
-<?php include("navbar.php"); ?>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
     </div><!-- /.container-fluid -->
 </section>
+<br><br>
 <!-- Main content -->
-<section class="content">
-
-<?php $act = (isset($_GET['act'])? $_GET['act']: '');
-    if($act=="logout"){
-        include('logout.php');  
-    }else if($act=="register"){
-        include('form_register.php');  
-    }else if($act=="showtype"){
-        include('showtype.php');  
-    }
-    else{
-        include('show.php');      
-    }
-
+<section class="content"> 
+<?php include("navbar.php"); ?>
+<?php 
+include('category_list.php');
 ?>
-
 </section>
 <!-- /.content -->
 

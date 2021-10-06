@@ -20,7 +20,7 @@ $rows = mysqli_fetch_array($result5);
     <div class="container">
         <div class="row">
             <div class="col-md-4 mt-3 mb-5">
-                <img src="assets/image/figure_fiction/<?php echo $rows['fg_address'];  ?>" width="100%" height="400px" alt="">
+                <img src="../assets/image/figure_fiction/<?php echo $rows['fg_address'];  ?>" width="100%" height="400px" alt="">
             </div>
             <div class="col-md-8  mt-3 mb-5">
                 <p>
@@ -37,6 +37,8 @@ $rows = mysqli_fetch_array($result5);
                 <div class=" col-3 p-2" style="background-color:#FFD54C;border-radius:20px">
                 <h5><i class="fas fa-shopping-basket"></i> ราคา : <?php echo $rows['price_fiction'];  ?> ฿</h5>
                 </div>
+                <br>
+                <a href="cart.php?fiction_id=<?php echo $row5['fiction_id'];  ?>" class="btn btn-danger btn-flat col-2">ซื้อ</a>
                 <br>
                 <br>
                 <a target="_blank" class="btn btn-flat btn-warning p-2" href="assets/PDF/file/<?php echo $rows['example'];?>"><?php echo $rows['example'];  ?></a>

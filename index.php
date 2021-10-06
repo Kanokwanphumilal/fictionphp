@@ -19,7 +19,10 @@ $menu = "index"
         include('formlogin_user.php');  
     }else if($act=="register"){
         include('form_register.php');  
-    }else{
+    }else if($act=="showtype"){
+        include('showtype.php');  
+    }
+    else{
         include('show.php');      
     }
 
