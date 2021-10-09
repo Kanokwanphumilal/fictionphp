@@ -44,6 +44,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 ?>
 <title>หน้าแรก</title>
 <?php include("header.php"); ?>
+<?php include("navbar.php"); ?>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
@@ -52,13 +53,13 @@ error_reporting( error_reporting() & ~E_NOTICE );
 <!-- Main content -->
 <section class="content">
     <div class="container">
-        <h4><i class="fas fa-shopping-cart"></i> ตะกร้าสินค้า </h4><br>
+        <h4><i class="fas fa-shopping-cart"style="margin-top:85px"></i> ตะกร้าสั่งซื้อ </h4><br>
         <form id="frmcart" name="frmcart" method="post" action="?act=update">
-            <table class="table table-bordered" width="100%" border="0" align="center" class="square">
+            <table class="table table-bordered " width="100%" border="0" align="center" class="square">
                 <tr>
                     <td bgcolor="#EAEAEA">#</td>
                     <td align="center" bgcolor="#EAEAEA">ภาพ</td>
-                    <td bgcolor="#EAEAEA">สินค้า</td>
+                    <td bgcolor="#EAEAEA">นิยาย</td>
                     <td align="center" bgcolor="#EAEAEA">ราคา</td>
                     <td align="center" bgcolor="#EAEAEA">จำนวน</td>
                     <td align="center" bgcolor="#EAEAEA">รวม(บาท)</td>
@@ -72,15 +73,16 @@ error_reporting( error_reporting() & ~E_NOTICE );
 		include("condb.php");
 		foreach($_SESSION['cart'] as $fiction_id=>$qty)
 		{
-			$sql = "SELECT * FROM fiction 
-			WHERE fiction_id='$fiction_id'";
-			$query = mysqli_query($conn, $sql);
-			$row = mysqli_fetch_array($query);
-			$sum = $row['price_fiction'] * $qty;
-			$total += $sum;
+			$sql	= "SELECT fc.*,ff.fg_address FROM fiction as fc 
+			INNER JOIN figure_fiction as ff ON fc.fiction_id=ff.fiction_id
+			WHERE fc.fiction_id='$fiction_id'";
+			$query	= mysqli_query($conn, $sql);
+			$row	= mysqli_fetch_array($query);
+			$sum	= $row['price_fiction']*$qty;
+			$total	+= $sum;
 			echo "<tr>";
 			echo "<td width='5%' >" . $i++. "</td>";
-			echo "<td width='20%'> <img src='../assets/" . $row['fg_address'] . "' width='50%' alt='img'>" .'</td>' ;
+			echo "<td width='20%'> <img src='../assets/image/figure_fiction/" . $row['fg_address'] . "' width='50%' alt='img'>" .'</td>' ;
 			echo "<td width='30%'>" .$row["name_fiction"]. "</td>";
 			echo "<td width='10%' align='right'>" .number_format($row["price_fiction"],2) . "</td>";
 			echo "<td width='10%' align='right'>";  

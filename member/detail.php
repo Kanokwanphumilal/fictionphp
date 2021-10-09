@@ -38,7 +38,7 @@ $rows = mysqli_fetch_array($result5);
                 <h5><i class="fas fa-shopping-basket"></i> ราคา : <?php echo $rows['price_fiction'];  ?> ฿</h5>
                 </div>
                 <br>
-                <a href="cart.php?fiction_id=<?php echo $row5['fiction_id'];  ?>" class="btn btn-danger btn-flat col-2">ซื้อ</a>
+               <a href="cart.php?fiction_id=<?php echo $rows['fiction_id'];  ?>&act=add" class="btn btn-success btn-flat">เพิ่มลงตะกร้า</a>
                 <br>
                 <br>
                 <a target="_blank" class="btn btn-flat btn-warning p-2" href="assets/PDF/file/<?php echo $rows['example'];?>"><?php echo $rows['example'];  ?></a>
