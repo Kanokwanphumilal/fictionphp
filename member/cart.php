@@ -10,7 +10,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 	{
 		if(isset($_SESSION['cart'][$fiction_id]))
 		{
-			$_SESSION['cart'][$fiction_id]++;
+			$_SESSION['cart'][$fiction_id];
 		}
 		else
 		{
@@ -72,25 +72,19 @@ error_reporting( error_reporting() & ~E_NOTICE );
 		include("condb.php");
 		foreach($_SESSION['cart'] as $fiction_id=>$qty)
 		{
-			$sql = "SELECT * FROM fiction WHERE fiction_id='$fiction_id'";
+			$sql = "SELECT * FROM fiction 
+			WHERE fiction_id='$fiction_id'";
 			$query = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_array($query);
 			$sum = $row['price_fiction'] * $qty;
 			$total += $sum;
-			$product_qty=$row['product_qty'];
 			echo "<tr>";
 			echo "<td width='5%' >" . $i++. "</td>";
-			echo "<td width='20%'> <img src='../img/" . $row['img'] . "' width='50%' alt='img'>" .'</td>' ;
-			echo "<td width='30%'>" 
-			.$row["product_name"]
-			."<br>" 
-			.'จำนวน : '
-			.$row["product_qty"]
-			.'  ชิ้น'
-			. "</td>";
-			echo "<td width='10%' align='right'>" .number_format($row["price_product"],2) . "</td>";
+			echo "<td width='20%'> <img src='../assets/" . $row['fg_address'] . "' width='50%' alt='img'>" .'</td>' ;
+			echo "<td width='30%'>" .$row["name_fiction"]. "</td>";
+			echo "<td width='10%' align='right'>" .number_format($row["price_fiction"],2) . "</td>";
 			echo "<td width='10%' align='right'>";  
-			echo "<input type='number' min='1' max='$product_qty' class='form-control' name='amount[$fiction_id]' value='$qty' size='2'/></td>";
+			echo "<input type='number' min='1' max='1' class='form-control' name='amount[$fiction_id]' value='$qty' size='2'/></td>";
 			echo "<td width='10%' align='right'>".number_format($sum,2)."</td>";
 			//remove product
 			echo "<td width='10%' align='center'><a class='btn btn-danger btn-flat btn-sm'  href='cart.php?fiction_id=$fiction_id&act=remove'>ลบ</a></td>";

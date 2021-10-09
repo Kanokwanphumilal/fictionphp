@@ -34,8 +34,10 @@ $menu = "fiction"
             if($act=='add'){
             include('actor_add.php');
             }else if($act=='edit'){
-            include("fiction_edit.php");
-            }else{
+            include("actor_edit.php");
+            }else if($act=='delete'){
+              include("actor_del.php");
+              }else{
             include('actor_list.php');
             }
             ?>

@@ -25,7 +25,7 @@
       <a class="nav-link" href="index.php?act=login">เข้าสู่ระบบ</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="#">สมัคร</a>
+      <a class="nav-link" href="index.php?act=register">สมัคร</a>
       </li>
     </ul>
   </div>
