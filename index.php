@@ -15,11 +15,16 @@ $menu = "index"
 <section class="content"> 
 <?php include("navbar.php"); ?>
 <?php $act = (isset($_GET['act'])? $_GET['act']: '');
+$s = (isset($_GET['s'])? $_GET['s']: '');
     if($act=="login"){
         include('formlogin_user.php');  
     }else if($act=="register"){
         include('form_register.php');  
-    }else if($act=="showtype"){
+    }
+    else if($s!=""){
+        include('search.php');  
+    }
+    else if($act=="showtype"){
         include('showtype.php');  
     }
     else{

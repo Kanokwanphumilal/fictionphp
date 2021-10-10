@@ -8,7 +8,7 @@ include('condb.php');
 
 $email = $_POST["email"];
 $name = $_POST["name"];
-$birthday = $_POST["birthday"];
+$birthday = $_POST["date"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $member_lavel = $_POST['member_lavel'];
@@ -17,11 +17,11 @@ $member_lavel = $_POST['member_lavel'];
     $sql = "INSERT INTO member
     (
     name,	
-    date,
+    birthday,
     email,
     username,
     password,
-    member_lavel,
+    member_lavel
     )
     VALUES
     (

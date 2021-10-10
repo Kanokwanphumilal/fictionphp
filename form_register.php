@@ -1,3 +1,16 @@
+<br>
+<br>
+
+<style>
+    body{
+        background-image: url("assets/image/back5.jpg") ;
+        
+    }
+    .card{
+        opacity: 0.9;
+    }
+</style>
+
 <div class="container">
     <div class="row ">
         <div class="offset-md-3 col-md-6 mt-5">
@@ -43,7 +56,7 @@
 
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-key"></i></div>
+                                <div class="input-group-text"><i class="fas fa-users-cog"></i></div>
                                 </div>
                                 <input type="text" class="form-control" id="member_lavel" name="member_lavel" placeholder="member_lavel">
                             </div>
@@ -61,3 +74,4 @@
         </div>
     </div>
 </div>
+
