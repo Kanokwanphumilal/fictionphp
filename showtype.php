@@ -38,7 +38,7 @@ $count = mysqli_num_rows($result6);
             <?php } ?>
     </div>      
      <?php  } else{ ?>
-    <div class="alert alert-warning mt-3" role="alert">
+    <div class="alert alert-info mt-3" role="alert">
      ไม่พบประเภทนิยาย
     </div>    
    <?php  }  ?>

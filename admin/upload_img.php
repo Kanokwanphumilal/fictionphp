@@ -35,7 +35,7 @@ $result_q = mysqli_query($conn,$query2);
         <div class="form-group">
             <div class="col-sm-12" align="left">
             <div class="form-group">รหัสนิยาย</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="">
+                <select class="form-control" id="exampleFormControlSelect1" name="fiction_id">
                 <?php foreach($result_q as $rowid) { ?>
                 <option value="<?php echo $rowid['fiction_id'];?>"><?php echo $rowid['fiction_id'];?></option>
                <?php   } ?>         

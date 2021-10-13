@@ -22,7 +22,7 @@ $fileupload =(isset($_POST['fg_address']) ? $_POST['fg_address'] :'');
 
 $sql ="INSERT INTO figure_fiction(figure_id,name,fiction_id,fg_address)VALUES('$figure_id','$name','$fiction_id','$upload')";
     
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql)or die ("Error in query: $sql " . mysqli_error($conn). "<br>$sql");
 
 $sql2 ="UPDATE fiction SET figure_id='$figure_id' WHERE fiction_id='$fiction_id'";
 $result2 = mysqli_query($conn, $sql2);

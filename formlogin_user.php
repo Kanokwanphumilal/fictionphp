@@ -4,7 +4,7 @@
 <br>
 <style>
     body{
-        background-image: url("assets/image/back5.jpg") ;
+        background-image: url("assets/image/bk2.jpg") ;
         opacity: 0.9;
     }
     /* .card{
@@ -35,7 +35,6 @@
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary  btn-block mb-2">เข้าสู่ระบบ</button>
-                        <span class="float-right">สมัครสมาชิก <a href="register.php">คลิกที่นี้</a> </span>
 
                     </form>
                 </div>

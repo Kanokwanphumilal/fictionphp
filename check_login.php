@@ -28,6 +28,7 @@ session_start();
                   if(mysqli_num_rows($result)==1){
                       $row = mysqli_fetch_array($result);
                       $_SESSION["id"] = $row["id"];
+                      $_SESSION["email"] = $row["email"];
                       $_SESSION["name"] = $row["name"];
                       $_SESSION["image"] = $row["image"];
                       $_SESSION['member_lavel'] = $row["member_lavel"];
@@ -71,7 +72,7 @@ session_start();
                                 text: "ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง",
                                 type: "warning"
                             }, function() {
-                            window.location = "form_login_user.php";
+                            window.location = "index.php?act=login";
                         });
                         }, 100);
                     </script>

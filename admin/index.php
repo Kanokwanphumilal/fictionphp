@@ -1,5 +1,18 @@
-<?php 
-$menu = "index"
+<?php include('condb.php');
+$menu = "index";
+
+$sql_total ="SELECT SUM(o_total) AS total        
+FROM order_head
+WHERE o_status IN(3)";
+$rs_total = mysqli_query($conn,$sql_total);
+$count_total = mysqli_fetch_array($rs_total);
+
+$sql_confirm ="SELECT * FROM order_head 
+WHERE o_status=2";
+$rs_confirm = mysqli_query($conn,$sql_confirm);
+$count_confirm=mysqli_num_rows($rs_confirm);
+
+
 ?>
 
 <title>หน้าแรก</title>
@@ -17,17 +30,17 @@ $menu = "index"
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><i class="fas fa-database"></i> ข้อมูลทั้งหมด</h3>
+            <h3 class="card-title"><i class="fas fa-database"></i> Dasborad</h3>
         </div>
         <br>
         <div class="card-body p-1">
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="small-box bg-info">
+                    <div class="small-box bg-primary">
                         <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
+                        <h1 class="text-white"><?php echo number_format($count_total['total']);  ?>  บาท</h1>
+                            <p>ยอดขายรายเดือน</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -40,8 +53,8 @@ $menu = "index"
                 <div class="col-md-4">
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
+                        <h1 class="text-white"><?php echo $count_confirm;  ?>  รายการ</h1>
+                            <p>รอยืนยันชำระเงิน</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -52,10 +65,10 @@ $menu = "index"
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="small-box bg-info">
+                    <div class="small-box bg-Warning">
                         <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
+                            <h3>ข้อมูลการขาย</h3>
+                            <p>ประจำเดือน</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -65,49 +78,6 @@ $menu = "index"
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
 
 

@@ -6,7 +6,7 @@ $query1 = "SELECT fc.*,c.*,ff.file_pdf,ft.fg_address FROM fiction as fc
 LEFT JOIN category as c ON fc.category_id=c.category_id
 LEFT JOIN  file_fiction as ff ON fc.fiction_id=ff.fiction_id
 LEFT JOIN figure_fiction as ft ON fc.fiction_id=ft.fiction_id
-LEFT JOIN author as a ON a.fiction_id=a.fiction_id
+LEFT JOIN author as a ON fc.fiction_id=a.fiction_id
 WHERE fc.name_fiction LIKE '%$s%' or c.name_category LIKE '%$s%' or fc.fiction_id LIKE '%$s%' or a.name LIKE '%$s%'
 ORDER BY fc.fiction_id ASC";
 $result1 = mysqli_query($conn, $query1)or die ("Error in query: $query1

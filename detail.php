@@ -16,6 +16,7 @@ $rows = mysqli_fetch_array($result5);
 ?>
 <?php  include("header.php");   ?>
 <?php  include("navbar.php"); ?>
+<br><br><br>
 <section>
     <div class="container">
         <div class="row">

@@ -92,7 +92,7 @@ $rows = mysqli_fetch_array($result5);
         <br>
         <div class="col-md-12">
         <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-dark">
                     <div class="card-title">
                     ข้อมูลผู้แต่ง : 
                     </div>

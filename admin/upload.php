@@ -23,7 +23,7 @@ $menu = "fiction"
             include("upload_file_list.php");
             }
             elseif($act=='delfile'){
-            include("upload_file_del.php");
+            include("upload_file_fic_del.php");
             }
             elseif($act=='upimg'){
             include("upload_img.php");

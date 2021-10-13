@@ -68,7 +68,7 @@ $row_m=mysqli_fetch_array($rs_m);
       <input type="hidden" name="image2" id="" value="<?php echo $row_m['image']; ?>">
         <input type="hidden" name="id" value="<?php  echo $id;  ?>">
       <button type="submit" class="btn btn-success btn-flat" id="btn"><span class="glyphicon glyphicon-saved"></span> บันทึก  
-      </button> <a href="index.php" type="button" class="btn btn-danger btn-flat" id="btn"><span class="glyphicon glyphicon-saved"></span> ยกเลิก  </a>
+      </button> <a href="profile.php" type="button" class="btn btn-danger btn-flat" id="btn"><span class="glyphicon glyphicon-saved"></span> ยกเลิก  </a>
     </div>
     
   </div>
