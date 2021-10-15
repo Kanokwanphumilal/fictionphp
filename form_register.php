@@ -4,7 +4,6 @@
 <style>
     body{
         background-image: url("assets/image/bk2.jpg") ;
-        
     }
     .card{
         opacity: 0.9;
@@ -17,55 +16,59 @@
             <div class="card">
             <h5 class="card-header text-center">สมัครสมาชิก</h5>
                 <div class="card-body">
-                    <form class="form" id="formRegister" method="post" action="register.php">
+                   <form  name="register" action="register.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
         
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-user"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ - นามสกุล">
+                                <input  name="name" type="text" required class="form-control" id="m_name" placeholder="" />
                             </div>
 
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-calendar-alt"></i></i></div>
                                 </div>
-                                <input type="date" class="form-control" id="date" name="date" placeholder="วันเดือนปีเกิด">
+                                 <input  name="date" type="date" required class="form-control" id="m_date" placeholder="" />
                             </div>
 
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                                 </div>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+                                 <input  name="email" type="email" class="form-control" id="m_email" required  placeholder=""/>
                             </div>
 
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-user"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                                <input  name="username" type="text" required class="form-control" /> 
                             </div>
 
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-key"></i></div>
                                 </div>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                 <input  name="password" type="password" required class="form-control" id="m_pass"/>
                             </div>
 
-                            <div class="input-group mb-2 mr-sm-2">
+                            <!-- <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-users-cog"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="member_lavel" name="member_lavel" placeholder="member_lavel">
+                               <input  name="member_lavel" type="password" required class="form-control" id="m_lavel"/>
+                            </div> -->
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="hidden" name="member_lavel" value="member">
+                             <button type="submit" class="btn btn-primary btn-block mb-2" id="btn"><span class="glyphicon glyphicon-saved"></span> สมัครสมาชิก  
+                             </button> <a href="index.php" type="button" class="btn btn-danger btn-block mb-2" id="btn"><span class="glyphicon glyphicon-saved"></span> ยกเลิก  </a>
                             </div>
  
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="g-recaptcha" data-callback="recaptcharCallback" data-sitekey="6LfnaB4cAAAAABnSqulLo1YYwCYzpUuP1h8jSX4X"></div>
-                            </div>
-
-                        <button type="submit" name="submit" id="submit"  class="btn btn-primary  btn-block mb-2">สมัครสมาชิก</button>
+                        <!-- <button type="submit" class="btn btn-primary btn-block mb-2" id="btn"><span class="glyphicon glyphicon-saved"></span> สมัครสมาชิก  
+                        </button> <a href="index.php" type="button" class="btn btn-danger btn-block mb-2" id="btn"><span class="glyphicon glyphicon-saved"></span> ยกเลิก  </a> -->
 
                     </form>
                 </div>

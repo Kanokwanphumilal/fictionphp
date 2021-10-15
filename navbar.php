@@ -12,13 +12,13 @@
         <a class="nav-link" href="category.php">หมวดหมู่</a>
       </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">มาใหม่</a>
+        <a class="nav-link" href="new.php">มาใหม่</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">ยอดนิยม</a>
       </li>
     </ul>
-    <form  class="form-inline my-2 my-lg-0" >
+    <form  action="index.php" class="form-inline my-2 my-lg-0" >
       <input class="form-control mr-sm-2" type="search" name="s" placeholder="ค้นหา" aria-label="ค้นหา">
       <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ค้นหา</button> -->
       <button type="submit" class="btn btn-success my-2 my-sm-0 " >ค้นหา</button>

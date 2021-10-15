@@ -80,7 +80,7 @@
 
                             <div class="form-group col-md-6">
                                 <label for="username">ชื่อผู้ใช้งาน</label>
-                                <input type="text" class="form-control" id="username" name="username" value="<?php echo $row['username']; ?> " >
+                                <input type="text" class="form-control" id="username" name="username" value="<?php echo $row['username']; ?> "  > 
                             </div>
 
                             <div class="form-group col-md-6">
@@ -90,11 +90,11 @@
 
                             <div class="form-group col-md-6">
                                 <label for="name">อีเมลล์ </label>
-                                <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>" >
+                                <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>"  >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="name">วันเดือนปีเกิด</label>
-                                <input type="date" class="form-control" id="date" name="date" value="<?php echo $row['birthday']; ?>" >
+                                <input type="date" class="form-control" id="date" name="date" value="<?php echo $row['birthday']; ?>"  >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="password">รหัสผ่าน</label>
@@ -136,3 +136,5 @@
                 }
     })
 </script>
+
+<!-- disabled -->

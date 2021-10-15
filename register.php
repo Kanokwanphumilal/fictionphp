@@ -25,8 +25,8 @@ $member_lavel = $_POST['member_lavel'];
     )
     VALUES
     (
-    '$name,',
-    '$date',
+    '$name',
+    '$birthday',
     '$email',
     '$username',
     '$password',

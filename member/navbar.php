@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($rs);
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="profile.php">ประวัติส่วนตัว</a>
           <a class="dropdown-item" href="order.php">ประวัติการสั่งซื้อ</a>
-          <a class="dropdown-item" href="niyai.php">นิยายของฉัน</a>
+          <a class="dropdown-item" href="niyai.php">ชั้นนิยายของฉัน</a>
           <a class="dropdown-item" href="issure.php">รายงานปัญหา</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="logout.php?act=login">ออกจากระบบ</a>

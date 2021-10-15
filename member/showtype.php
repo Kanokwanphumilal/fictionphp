@@ -13,7 +13,7 @@ $count = mysqli_num_rows($result6);
 ?>
 <!-- <link rel="stylesheet" href="assets/CSS/sltyle.css"> -->
 <section class="container">
-<h4 class="text-center mt-4">รายการนิยาย ( <?php echo $count; ?> ) </h4>
+<h4 class="text-center mt-4">รายการนิยาย </h4>
     <?php if($count > 0) { ?>
      <div class="row">
            <!-- Section Blog --> 
@@ -21,7 +21,7 @@ $count = mysqli_num_rows($result6);
             <section class="col-12 col-sm-6 col-md-4 p-2" style="margin-top:50px;">
                 <div class="card h-100">
                     <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/image/figure_fiction/<?php echo $row6['fg_address']  ?>" height="400px" alt="Coding">
+                        <img class="card-img-top" src="../assets/image/figure_fiction/<?php echo $row6['fg_address']  ?>" height="400px" alt="Coding">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row6['name_fiction']  ?></h5>
@@ -30,7 +30,8 @@ $count = mysqli_num_rows($result6);
                             <!-- Section star -->
                     </div>
                     <div class="p-3">
-                    <span class="badge bg-primary p-1" style="font-size:14px;"><?php echo $row6['price_fiction']  ?>    บาท </span> <a href="" class="btn btn-danger btn-flat float-right disabled" onclick="myFunction()">ซื้อ</a>
+                    <span class="badge bg-primary p-1" style="font-size:14px;"><?php echo $row6['price_fiction']  ?>    บาท </span> 
+                    <a href="cart.php?fiction_id=<?php echo $row6['fiction_id'];  ?>&act=add" class="btn btn-danger btn-flat float-right ">ซื้อ</a>
                     <a href="detail.php?fiction_id=<?php echo $row6['fiction_id'];  ?>" class="btn btn-primary btn-flat float-right ">เพิ่มเติม</a>
                 </div>
                 </div>

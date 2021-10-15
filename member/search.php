@@ -31,6 +31,7 @@ $count = mysqli_num_rows($result1);
                             <!-- Section star -->
                     </div>
                     <div class="p-3">
+                    <span class="badge bg-primary p-1" style="font-size:14px;"><?php echo $row5['price_fiction']  ?>    บาท </span> 
                     <a href="cart.php?fiction_id=<?php echo $row5['fiction_id'];  ?>&act=add" class="btn btn-danger btn-flat float-right ">ซื้อ</a>
                     <a href="detail.php?fiction_id=<?php echo $row5['fiction_id'];  ?>" class="btn btn-primary btn-flat float-right ">เพิ่มเติม</a>
                 </div>

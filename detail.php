@@ -90,7 +90,7 @@ $rows = mysqli_fetch_array($result5);
         </div>
         <br>
         <div class="col-md-12">
-        <div class="card">
+        <!-- <div class="card">
                 <div class="card-header">
                     <div class="card-title">
                     ข้อมูลผู้แต่ง : 
@@ -100,7 +100,7 @@ $rows = mysqli_fetch_array($result5);
             <p>ชื่อ <?php echo $rows['name'];  ?></p>
             <p>เบอร์โทร <?php echo $rows['phone'];  ?></p>
                 </div>
-            </div>
+            </div> -->
            <br>
             <div class="mt-5">
                <a href="index.php" class="btn btn-danger btn-flat col-2">กลับ</a>
